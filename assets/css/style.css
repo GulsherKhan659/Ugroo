@@ -13,6 +13,14 @@
 /*
 [ 1. General Code ]
 ================ */
+.address-font{
+  line-height: 0.4 !important;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+
 .client-logo .col-2 .brand-logo img {
   margin-top: 35%;
   width: 50%;
@@ -111,16 +119,16 @@ a,
 [ 3. Global Classes ]
 ============================ */
 .section-ptb, .section-pt, .section-pb {
-  padding-top: 12rem;
-  padding-bottom: 12rem; }
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
   @media (min-width: 768px) and (max-width: 991.98px) {
     .section-ptb, .section-pt, .section-pb {
-      padding-top: 8rem;
-      padding-bottom: 8rem; } }
+      padding-top: 3rem;
+      padding-bottom: 3rem; } }
   @media (max-width: 767.98px) {
     .section-ptb, .section-pt, .section-pb {
-      padding-top: 6rem;
-      padding-bottom: 6rem; } }
+      padding-top: 4rem;
+      padding-bottom: 4rem; } }
 
 .section-pt {
   padding-bottom: 0 !important; }
