@@ -29,6 +29,58 @@ background-color: #262e45;
       padding: 0 !important;
       font-size: 12px !important;
     }
+    .single-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pricing-plan {
+      padding: 40px 0;
+    }
+    
+    .single-plan {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+    
+    .single-plan:hover {
+      transform: translateY(-10px);
+    }
+    
+    .single-plan.popular-plan {
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    
+    .stiker {
+      border-radius: 0 0 8px 8px;
+      transform: translateX(-50%);
+    }
+    
+    .price sub {
+      font-size: 16px;
+      bottom: 0;
+    }
+    
+    .pricing-text-s {
+      font-size: 15px;
+    }
+    
+    @media (max-width: 767.98px) {
+      .pricing-plan {
+        padding: 60px 0;
+      }
+      
+      .single-plan {
+        margin-bottom: 30px;
+        max-width: 400px;
+      }
+    }
   </style>
 </head>
 <!--[if lt IE 9]>
@@ -196,104 +248,112 @@ background-color: #262e45;
 <!-- Icon Blocks End -->
 
 <!-- Pricing Plan Start -->
-<div class="pricing-plan  style-1 section-ptb bg-light">
+<div class="pricing-plan style-1 section-ptb bg-light">
   <div class="container">
     <div class="row text-center">
       <div class="col">
         <div class="heading mb-75">
           <h1>Pricing <span class="text-primary">Plan</span></h1>
-          <p>
-            Your digital growth shouldn’t just keep up – it should lead. Let’s ignite your brand, capture your audience, and drive unstoppable growth
+          <p class="mb-0">
+            Your digital growth shouldn't just keep up - it should lead. Let's ignite your brand, capture your audience, and drive unstoppable growth.
           </p>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12 col-md-4">
-        <div style="height: 550px;" class="single-plan mx-auto text-center bg-white pt-40 pb-60">
-          <div class="icon mb-15">
-            <img alt="Icon" src="assets/img/icons/10.png">
-          </div>
-          <h2>Starter Spark </h2>
-          <small class="py-2 text-danger">Perfect for businesses taking their first digital steps.
+    <div class="row g-4">
 
-          </small>
-          <div class="price">
-            <h1><sup>$</sup>299<sub>/Mo</sub></h1>
+      <!-- Starter Spark -->
+      <div class="col-12 col-md-4">
+        <div class="single-plan mx-auto text-center bg-white pt-40 pb-40">
+          <div>
+            <div class="icon mb-15">
+              <img alt="Icon" src="assets/img/icons/10.png" width="60">
+            </div>
+            <h2>Starter Spark</h2>
+            <small class="py-2 text-danger d-block">Perfect for businesses taking their first digital steps.</small>
+            <div class="price py-3">
+              <h1 class="mb-0"><sup>$</sup>299<sub>/Mo</sub></h1>
+            </div>
+            <ul class="list-unstyled mb-30">
+              <li class="py-2 pricing-text-s">Basic digital marketing</li>
+              <li class="py-2 pricing-text-s">Foundational SEO and keyword optimization</li>
+              <li class="py-2 pricing-text-s">Initial brand positioning and awareness</li>
+              <li class="py-2 pricing-text-s">Monthly performance reports</li>
+            </ul>
           </div>
-          <ul class="list-group mb-30 pt-5">
-            <li class="pricing-text-s">Basic digital marketing</li>
-            <li class="pricing-text-s">Foundational SEO and keyword optimization</li>
-            <li class="pricing-text-s">Initial brand positioning and awareness</li>
-            <li class="pricing-text-s">Monthly performance reports</li>
-          </ul>
-          <a href="https://calendly.com/ugro" ><button class="btn btn-primary">Let's Talk</a></button>
+          <div class="mt-auto pt-3">
+            <a href="https://calendly.com/ugro" class="btn btn-primary px-4 py-2">Let's Talk</a>
+          </div>
         </div>
       </div>
-      <!-- Single Plan End -->
-      
-      <!-- Single Plan End -->
 
+      <!-- Growth Engine -->
       <div class="col-12 col-md-4">
-        <div style="height: 550px;" class="single-plan mx-auto text-center bg-white pt-70 pb-75">
-          <div class="icon mb-15">
-            <img alt="Icon" src="assets/img/icons/11.png">
+        <div class="single-plan mx-auto text-center bg-white pt-40 pb-40">
+          <div>
+            <div class="icon mb-15">
+              <img alt="Icon" src="assets/img/icons/11.png" width="60">
+            </div>
+            <h2>Growth Engine</h2>
+            <small class="py-2 text-danger d-block">For brands ready to fuel their online presence.</small>
+            <div class="price py-3">
+              <h1 class="mb-0"><sup>$</sup>499<sub>/Mo</sub></h1>
+              <h6 class="mt-2" style="text-decoration: line-through;">$699/Mo</h6>
+            </div>
+            <ul class="list-unstyled mb-30">
+              <li class="py-2 pricing-text-s">Complete social media page management</li>
+              <li class="py-2 pricing-text-s">Daily content updates and engagement</li>
+              <li class="py-2 pricing-text-s">Multi-channel ad campaigns</li>
+              <li class="py-2 pricing-text-s">Advanced analytics and insights</li>
+            </ul>
           </div>
-          <h2>Growth Engine</h2>
-          <small class="py-2 text-danger">For brands ready to fuel their online presence.
-
-          </small>
-          <div class="price">
-            <h1><sup>$</sup>499<sub>/Mo</sub></h1>
+          <div class="mt-auto pt-3">
+            <a href="https://calendly.com/ugro" class="btn btn-primary px-4 py-2">Let's Talk</a>
           </div>
-          <ul class="list-group mb-30 pt-5">
-            <li class="pricing-text-s">Complete social media page management</li>
-<li class="pricing-text-s">Daily content updates and engagement</li>
-<li class="pricing-text-s">Multi-channel ad campaigns (Facebook, Instagram, LinkedIn)</li>
-<li class="pricing-text-s">Advanced analytics and insights</li>
-          </ul>
-          <a href="https://calendly.com/ugro" ><button class="btn btn-primary">Let's Talk</a></button>
-       
         </div>
       </div>
-      <!-- Single Plan End -->
-      <div class="col-12 col-md-4">
-        <div style="    margin-top: 5px;
-  height: 550px;" class="single-plan popular-plan text-center bg-primary pt-40 pb-60">
-          <div class="stiker bg-white">
-            <h5 class="mb-0">Popular Plan</h5>
-          </div>
-          <div class="icon mb-15">
-            <img alt="Icon" src="assets/img/icons/1.png">
-          </div>
-          <h2 class="text-white">Powerhouse Pro</h2>
-          <div class="price">
-            <small class="py-2 text-white">For ambitious brands ready to dominate their market.
-            </small>
-            <h1 class="text-white">
-              <sup>$</sup>999<sub>/Mo</sub></h1>
 
-              <h6 style="text-decoration: line-through;">
-                $1499/Mo</h6>
+      <!-- Powerhouse Pro -->
+      <div class="col-12 col-md-4">
+        <div class=" mt-0 single-plan popular-plan mx-auto text-center bg-primary pt-40 pb-40 position-relative">
+          <div class="stiker bg-white position-absolute top-0 start-50 translate-middle px-3 py-1">
+            <h5 class="mb-0 text-primary small">Popular Plan</h5>
           </div>
-          
-          <ul class="list-group mb-40 pt-5">
-            <li class="pricing-text-s">Dedicated resource for content creation</li>
-<li class="pricing-text-s">Custom-designed posts and ad creatives</li>
-<li class="pricing-text-s">Multi-channel ad management and optimization</li>
-<li class="pricing-text-s">Full content strategy and execution</li>
-<li class="pricing-text-s">Premium support and monthly performance deep-dives</li>
-          </ul>
-          <a href="https://calendly.com/ugro" ><button class="btn btn-primary btn-light">Let's Talk</a></button>
+          <div>
+            <div class="icon mb-15">
+              <img alt="Icon" src="assets/img/icons/1.png" width="60">
+            </div>
+            <h2 class="text-white">Powerhouse Pro</h2>
+            <small class="py-2 text-white d-block">For ambitious brands ready to dominate their market.</small>
+            <div class="price py-3">
+              <h1 class="text-white mb-0"><sup>$</sup>999<sub>/Mo</sub></h1>
+              <h6 class="text-white mt-2" style="text-decoration: line-through;">$1499/Mo</h6>
+            </div>
+            <ul class="list-unstyled mb-30 text-white">
+              <li class="py-2 pricing-text-s">Dedicated content creation</li>
+              <li class="py-2 pricing-text-s">Custom-designed posts and ads</li>
+              <li class="py-2 pricing-text-s">Multi-channel ad management</li>
+              <li class="py-2 pricing-text-s">Full content strategy</li>
+              <li class="py-2 pricing-text-s">Premium support</li>
+            </ul>
+          </div>
+          <div class="mt-auto pt-3">
+            <a href="https://calendly.com/ugro" class="btn btn-light px-4 py-2">Let's Talk</a>
+          </div>
         </div>
-        
       </div>
-      
+
     </div>
-    <p class="ms-5 p-5 fw-bold">
-      Fuel Your Growth. Take the Lead. Let’s Create Your Custom Plan Today <a href="https://calendly.com/ugro" ><span class="btn btn-primary">Let's Talk</a></span>
-       
-    </p>
+
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <p class="fw-bold mb-4 mt-5">
+          Fuel Your Growth. Take the Lead. Let's Create Your Custom Plan Today
+          
+        <a href="https://calendly.com/ugro" class="text-danger">Let's Talk</a>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 <!-- Pricing Plan End -->
@@ -327,7 +387,8 @@ background-color: #262e45;
         <!-- Single logo -->
         <div class="col-2">
           <div class="brand-logo">
-            <a href="#"><img src="assets/img/client/logo/5.png" alt="Client Logo"></a>
+              <a href="https://www.linkedin.com/company/ipl-logistics/https://www.linkedin.com/company/ipl-logistics/"><img src="assets/img/client/logo/5.png" alt="Client Logo"></a>
+          
           </div>
         </div>
         <!-- Single logo -->
