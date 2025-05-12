@@ -55,6 +55,51 @@ height: 520px;
 
   background-color: #262e45;
 }
+/* Style the existing list without breaking structure */
+.styled-list {
+  list-style: none;
+  padding: 0;
+}
+
+.styled-list li {
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  font-size: 24px !important;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.styled-list li:hover {
+  background: #e9f5ff;
+  transform: translateX(5px);
+}
+
+.list-number {
+  font-weight: 700;
+  color: #ff3333; /* Primary color */
+  margin-right: 12px;
+  font-size: 1.84rem;
+}
+
+.list-text {
+  color: #333;
+  font-size:16px;
+}
+
+/* Pulse animation for numbers on hover */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.styled-list li:hover .list-number {
+  animation: pulse 0.5s ease;
+}
 
   </style>
 </head>
@@ -196,7 +241,7 @@ height: 520px;
   </div>
   <!-- Icon Blocks End -->
   <!-- Hero Block Start -->
-  <div class="hero-block bg-white section-ptb">
+  <!-- <div class="hero-block bg-white section-ptb">
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="col-12 col-md-6 mb-sm-30" data-aos="fade-right">
@@ -226,6 +271,51 @@ height: 520px;
                 05.
                 Startup Speed, Enterprise Quality – Agile and precise
               
+              </li>
+            </ul>
+            <a href="about.html" class="btn btn-primary">About Us</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" data-aos="fade-left">
+          <div class="hero-thumb text-left text-lg-right">
+            <img src="assets/img/hero/1.png" alt="Hero Thumbnail">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!--  -->
+  <!--  -->
+  <div class="hero-block bg-white section-ptb">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-12 col-md-6 mb-sm-30" data-aos="fade-right">
+          <div class="hero-text m-minus">
+            <h1 class="mb-25">Why Choose <span class="text-primary text-uppercase fw-bold">U</span><span class="text-dark text-uppercase fw-bold">gro</span></h1>
+            <p class="mb-40">We’re not just another digital marketing agency—we’re your growth partners. With data-driven solutions and creative excellence, we help you connect, convert, and dominate your market.</p>
+            
+            <!-- Added wrapper class "styled-list" to target your existing list -->
+            <ul class="list-group mb-40 styled-list">
+              <li class="my-2">
+                <span class="list-number">01.</span>
+                <span class="list-text">AI-Integrated Services – Smart tech + human insight</span>
+              </li>
+              <li class="my-2">
+                <span class="list-number">02.</span>
+                <span class="list-text">CX-First Thinking – Customer experience as your competitive edge</span>
+              </li>
+              <li class="my-2">
+                <span class="list-number">03.</span>
+                <span class="list-text">Creative + Tech Stack – Where code meets brand</span>
+              </li>
+              <li class="my-2">
+                <span class="list-number">04.</span>
+                <span class="list-text">Built to Scale Globally – Teams across 4 continents</span>
+              </li>
+              <li class="my-2">
+                <span class="list-number">05.</span>
+                <span class="list-text">Startup Speed, Enterprise Quality – Agile and precise</span>
               </li>
             </ul>
             <a href="about.html" class="btn btn-primary">About Us</a>
@@ -537,7 +627,7 @@ height: 520px;
                       <li><a href="https://www.facebook.com/profile.php?id=61576135311285"><i class="fa fa-facebook-square"></i></a></li>
                       <li><a href="https://x.com/Ugro_withus"><i class="fa fa-twitter-square"></i></a></li>
                       <li><a href="https://www.linkedin.com/company/107228034/admin/dashboard/"><i class="fa fa-linkedin-square"></i></a></li>
-                      <li><a href="www.instagram.com/teamugro"><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="https://www.instagram.com/teamugro"><i class="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
               </div>
@@ -616,7 +706,31 @@ height: 520px;
     </div>
   </footer>
   <!-- Footer Secion End -->
+<script>
+  // Animate list items on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    const listItems = document.querySelectorAll('.styled-list li');
+    
+    // Staggered fade-in animation
+    listItems.forEach((item, index) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateX(-10px)';
+      item.style.transition = `all 0.3s ease ${index * 0.1}s`;
+      
+      setTimeout(() => {
+        item.style.opacity = '1';
+        item.style.transform = 'translateX(0)';
+      }, 100);
+    });
 
+    // Optional: Click to log which item was clicked
+    listItems.forEach(item => {
+      item.addEventListener('click', () => {
+        console.log('Clicked:', item.textContent.trim());
+      });
+    });
+  });
+</script>
   <!-- JS Files -->
   <script src="assets/js/vandor/jquery-3.2.1.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>

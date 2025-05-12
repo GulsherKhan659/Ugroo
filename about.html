@@ -23,6 +23,55 @@
 
 background-color: #262e45;
 }
+
+
+.list-group-our-vission {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-group-our-vission li {
+  position: relative;
+  background: #ff2b0f23;
+  padding: 20px 25px 20px 60px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  /* margin: ; */
+  /* line-height: 1; */
+  font-size: 12px !important;
+  color: #1e1e2f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.list-group-our-vission li::before {
+  content: attr(data-number);
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #ff3737, #ff3f3f62);
+  color: #fff;
+  font-weight: bold;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-our-vission li:hover {
+  background: linear-gradient(135deg, #e6ecff, #f4f7ff);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
   </style>
 </head>
 <!--[if lt IE 9]>
@@ -134,16 +183,15 @@ background-color: #262e45;
         <div class="col-12 col-lg-6" data-aos="fade-right">
           <div class="hero-text section-pb">
             <h1 class="mb-25">Our Vision</h1>
-            <p class="mb-20">At Ugro, we envision a digital landscape where every business thrives through intelligent
-              marketing. We're committed to pioneering strategies that bridge innovation with measurable growth,
-              transforming how brands connect with their audiences.</p>
-            <ul class="list-group mb-30">
-              <li>01. To redefine digital marketing through AI-powered analytics and human creativity</li>
-              <li>02. To build marketing ecosystems that scale with your business ambitions</li>
-              <li>03. To become the growth partner of choice for forward-thinking brands</li>
+            <p class="mb-20">At Ugro, we’re not just navigating the digital landscape – we’re shaping it. We envision a world where every brand thrives through the perfect blend of cutting-edge technology and human creativity. Here’s what drives us:</p>
+            <ul class="list-group-our-vission mb-30">
+              <li data-number="01">Harness the power of AI and human insight to unlock smarter, more impactful campaigns.</li>
+              <li data-number="02">Build dynamic marketing ecosystems that scale with your vision, from startup to standout.</li>
+              <li data-number="03">Empower forward-thinking brands to lead, innovate, and inspire in a digital-first world.</li>
             </ul>
+            
+            
             <a href="services.html" class="btn btn-primary">Get Our Services</a>
-
           </div>
         </div>
         <div class="col-12 col-lg-6 align-self-end" data-aos="fade-left">
@@ -154,6 +202,7 @@ background-color: #262e45;
       </div>
     </div>
   </div>
+  
   <!-- Hero Block End -->
    <!-- Work Process Start -->
    <div class="work-process bg-white section-ptb">
@@ -402,7 +451,7 @@ background-color: #262e45;
                       <li><a href="https://www.facebook.com/profile.php?id=61576135311285"><i class="fa fa-facebook-square"></i></a></li>
                       <li><a href="https://x.com/Ugro_withus"><i class="fa fa-twitter-square"></i></a></li>
                       <li><a href="https://www.linkedin.com/company/107228034/admin/dashboard/"><i class="fa fa-linkedin-square"></i></a></li>
-                      <li><a href="www.instagram.com/teamugro"><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="https://www.instagram.com/teamugro"><i class="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
               </div>
