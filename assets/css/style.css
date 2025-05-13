@@ -1109,6 +1109,8 @@ button.btn {
 [ 6. Scroll UP ]
 ================ */
 #scrollUp {
+  display: none;
+  /* opacity: c; */
   background-color: #f44438;
   bottom: 5rem;
   right: 2rem;
