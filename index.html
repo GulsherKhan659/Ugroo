@@ -7,6 +7,8 @@
   <meta name="description" content="Digital Marketing Agency">
 
   <title>Ugro | Home </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon-32x32.png">
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon-16x16.png">
@@ -97,11 +99,56 @@ height: 520px;
   100% { transform: scale(1); }
 }
 
-.styled-list li:hover .list-number {
-  animation: pulse 0.5s ease;
+  </style>
+  <style>
+.process-flow {
+  position: relative;
 }
 
-  </style>
+.icon-circle {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.step-title {
+  font-size: 1.5rem;
+}
+
+.step-desc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5 !important;
+}
+
+/* Connectors - optional dashed lines */
+.step::after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  right: -30px;
+  width: 60px;
+  height: 2px;
+  border-top: 2px dashed #ccc;
+}
+
+.step:last-child::after {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .step::after {
+    display: none;
+  }
+}
+</style>
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -121,14 +168,15 @@ s0.parentNode.insertBefore(s1,s0);
   <!-- Preloader Start -->
   <div id="fadeout" class="loader-wrap">
     <div class="d-flex justify-content-center align-items-center">
-      <div class="loader">
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__ball"></div>
+      <div class="loader-wrap d-flex justify-content-center align-items-center">
+        <div class="ugro-loader">
+          <img src="./assets/img/logo.png" alt="UGRO Logo" class="ugro-logo" />
+          <div class="loading-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
       </div>
+  
     </div>
   </div>
   <!-- Preloader End -->
@@ -192,7 +240,8 @@ s0.parentNode.insertBefore(s1,s0);
 
       </div>
       <div class="image-layer ml-md-auto align-self-md-center align-self-start" data-aos="fade-left">
-        <img width="80%" src="assets/img/slider/layer/1.png" alt="Layer Image">
+     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<dotlottie-player src="https://lottie.host/228f1d9e-4127-4354-96dc-010a3cb34eac/T22B5T0FAq.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
       </div>
     </div>
   </div>
@@ -265,34 +314,68 @@ s0.parentNode.insertBefore(s1,s0);
             <h1 class="mb-25">Why Choose <span class="text-primary text-uppercase fw-bold">U</span><span class="text-dark text-uppercase fw-bold">gro</span></h1>
             <p class="mb-40">We’re not just another digital marketing agency—we’re your growth partners. With data-driven solutions and creative excellence, we help you connect, convert, and dominate your market.</p>
             
-            <ul class="list-group mb-40 styled-list">
-              <li class="my-2">
-                <span class="list-number">01.</span>
-                <span class="list-text">AI-Integrated Services – Smart tech + human insight</span>
-              </li>
-              <li class="my-2">
-                <span class="list-number">02.</span>
-                <span class="list-text">CX-First Thinking – Customer experience as your competitive edge</span>
-              </li>
-              <li class="my-2">
-                <span class="list-number">03.</span>
-                <span class="list-text">Creative + Tech Stack – Where code meets brand</span>
-              </li>
-              <li class="my-2">
-                <span class="list-number">04.</span>
-                <span class="list-text">Built to Scale Globally – Teams across 4 continents</span>
-              </li>
-              <li class="my-2">
-                <span class="list-number">05.</span>
-                <span class="list-text">Startup Speed, Enterprise Quality – Agile and precise</span>
-              </li>
-            </ul>
-            <a href="about.html" class="btn btn-primary">About Us</a>
+            <section class="process-flow container py-5">
+  <div class="row justify-content-center text-center g-4">
+    
+    <!-- Step 1 -->
+    <div class="col-md-3 col-sm-6 step">
+      <div class="icon-circle bg-warning text-dark">
+        <i class="fas fa-brain fa-2x"></i>
+      </div>
+      <h6 class="step-title mt-3 text-warning fw-bold">AI Services</h6>
+      <p class="step-desc small">Smart tech + human insight</p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="col-md-3 col-sm-6 step">
+      <div class="icon-circle bg-success text-white">
+        <i class="fas fa-user-check fa-2x"></i>
+      </div>
+      <h6 class="step-title mt-3 text-success fw-bold">CX Thinking</h6>
+      <p class="step-desc small">Customer experience advantage</p>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="col-md-3 col-sm-6 step">
+      <div class="icon-circle bg-danger text-white">
+        <i class="fas fa-code fa-2x"></i>
+      </div>
+      <h6 class="step-title mt-3 text-danger fw-bold">Creative + Tech</h6>
+      <p class="step-desc small">Where code meets brand</p>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="col-md-3 col-sm-6 step">
+      <div class="icon-circle bg-dark text-white">
+        <i class="fas fa-globe fa-2x"></i>
+      </div>
+      <h6 class="step-title mt-3 text-dark fw-bold">Global Scale</h6>
+      <p class="step-desc small">Teams across 4 continents</p>
+    </div>
+  </div>
+
+  <!-- Optional 5th Step Below -->
+  <!-- <div class="row justify-content-center mt-5">
+    <div class="col-md-4 text-center step">
+      <div class="icon-circle bg-primary text-white">
+        <i class="fas fa-rocket fa-2x"></i>
+      </div>
+      <h6 class="step-title mt-3 text-primary fw-bold">05. Enterprise Speed</h6>
+      <p class="step-desc small">Agile and precise delivery</p>
+    </div>
+  </div> -->
+</section>
+<div class="text-center">
+            <a href="about.html" class="btn btn-primary mt-2">About Us</a>
+            </div>
           </div>
         </div>
         <div class="col-12 col-md-6" data-aos="fade-left">
           <div class="hero-thumb text-left text-lg-right">
-            <img src="assets/img/hero/1.png" alt="Hero Thumbnail">
+            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<dotlottie-player src="https://lottie.host/ee7854b5-9b4d-4853-96f4-8b2980f4d30d/okV2GexHa7.lottie" background="transparent" speed="1" style="width: 100%px; height: 300px" loop autoplay></dotlottie-player>
+            <!-- <img src="assets/img/hero/1.png" alt="Hero Thumbnail"> -->
           </div>
         </div>
       </div>
@@ -581,6 +664,7 @@ s0.parentNode.insertBefore(s1,s0);
   
   <!-- Promo Box End -->
   <!-- Footer Secion Start -->
+
   <footer>
     <div class="footer-widget-area bg-dark ptb-100">
       <div class="container">
@@ -609,10 +693,10 @@ s0.parentNode.insertBefore(s1,s0);
               <h3 class="widget-title text-white mb-25">Useful Links</h3>
               <div class="widget-content">
                   <ul class="float-left">
+		
+                  <li><a href="./index.html">Home</a></li>
+
                   <li><a href="./about.html">About Us</a></li>
-                  <li><a href="#">Term & Policy</a></li>
-                  <!-- <li><a href="#">FAQ’s</a></li> -->
-                  <!-- <li><a href="#">Our Story</a></li> -->
                   <li><a href="./services.html">Services</a></li>
                   <li><a href="./contact.html">Contact Us</a></li>
                 </ul>
@@ -675,6 +759,7 @@ s0.parentNode.insertBefore(s1,s0);
       </div>
     </div>
   </footer>
+
   <!-- Footer Secion End -->
 <script>
   // Animate list items on page load
